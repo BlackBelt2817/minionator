@@ -10,6 +10,7 @@ class App extends Component {
       phrase: '',
       translated: 'Papoy?'
     };
+    this.handleSearch = this.handleSearch.bind(this);
   }
 
   handlePhraseChange(e) {
@@ -31,6 +32,12 @@ class App extends Component {
     });
   }
 
+  handleKeyPress(e) {
+    if (e.key === "Enter") {
+      this.handleSearch;
+    }
+  }
+
   render() {
     return (
       <div className="App">
@@ -42,8 +49,8 @@ class App extends Component {
         </div>
         <form>
           <div className='form-group'>
-            <input onChange={this.handlePhraseChange.bind(this)} placeholder='Minionize Here' style={{borderRadius: 5, width: 1000, textAlign: 'center', height: 75, fontSize: 30, marginTop: 150}} type='text' />
-            <div><Button onClick={this.handleSearch.bind(this)}>Pokka ta tipa!</Button></div>
+            <input onKeyPress={} onChange={this.handlePhraseChange.bind(this)} placeholder='Minionize Here' style={{borderRadius: 5, width: 1000, textAlign: 'center', height: 75, fontSize: 30, marginTop: 150}} type='text' />
+            <div><Button onClick={this.handleSearch}>Pokka ta tipa!</Button></div>
           </div>
         </form>
       </div>
