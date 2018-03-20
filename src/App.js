@@ -20,7 +20,7 @@ class App extends Component {
 
   handleSearch() {
     let text = this.state.phrase.split(' ').join('%20') + '%21';
-    let url = 'http://api.funtranslations.com/translate/minion.json?text=';
+    let url = 'https://api.funtranslations.com/translate/minion.json?text=';
     axios.post(url + text)
     //.then(res => console.log(res.data.contents.translated));
     .then(res => {
