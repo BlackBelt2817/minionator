@@ -49,7 +49,7 @@ class App extends Component {
         </div>
         <form>
           <div className='form-group'>
-            <input onKeyPress={this.handleKeyPress} onChange={this.handlePhraseChange.bind(this)} placeholder='Minionize Here' style={{borderRadius: 5, width: 1000, textAlign: 'center', height: 75, fontSize: 30, marginTop: 150}} type='text' />
+            <input onKeyPress={(e) => this.handleKeyPress(e)} onChange={this.handlePhraseChange.bind(this)} placeholder='Minionize Here' style={{borderRadius: 5, width: 1000, textAlign: 'center', height: 75, fontSize: 30, marginTop: 150}} type='text' />
             <div><Button onClick={this.handleSearch}>Pokka ta tipa!</Button></div>
           </div>
         </form>
