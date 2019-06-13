@@ -33,7 +33,9 @@ class App extends Component {
   }
 
   handleKeyPress(e) {
+      
     if (e.key === "Enter") {
+        e.preventDefault();
       this.handleSearch();
     }
   }
